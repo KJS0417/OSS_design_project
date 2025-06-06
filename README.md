@@ -15,7 +15,9 @@ GUI 관련 클래스 파일 업로드
 Analysis 문서 수정   
 
 ### 2025-06-06
-Design 문서 작성 및 Analysis 문서 수정
+Design 문서 작성
+Analysis 문서 수정
 
 ### 2025-06-06
-PayLog 프로그램의 소스 코드 업로드 및 PayLog 실행법을 기술한 Readme.txt 작성
+PayLog 프로그램의 소스 코드 업로드
+PayLog 실행법을 기술한 Readme.txt 작성
