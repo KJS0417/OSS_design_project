@@ -1,6 +1,12 @@
 import tkinter as tk
 from tkinter import messagebox
 import os
+from pathlib import Path
+
+def get_password_file_path():
+    app_dir = os.path.join(Path.home(), "Documents", "PayLog")
+    os.makedirs(app_dir, exist_ok=True)
+    return os.path.join(app_dir, "password.txt")
 
 class LoginWindow:
     def __init__(self, root, on_success):
@@ -9,7 +15,7 @@ class LoginWindow:
         self.root.title("로그인")
         self.root.geometry("300x150")
 
-        if not os.path.exists("password.txt"):
+        if not os.path.exists(get_password_file_path()):
             self.setup_password_ui()
         else:
             self.login_ui()
@@ -24,7 +30,7 @@ class LoginWindow:
     def save_password(self, event=None):
         pw = self.new_pw_entry.get()
         if pw:
-            with open("password.txt", "w") as f:
+            with open(get_password_file_path(), "w") as f:
                 f.write(pw)
             messagebox.showinfo("성공", "비밀번호가 설정되었습니다.")
             self.root.destroy()
@@ -41,7 +47,7 @@ class LoginWindow:
 
     def check_password(self, event=None):
         entered_pw = self.password_entry.get()
-        with open("password.txt", "r") as f:
+        with open(get_password_file_path(), "r") as f:
             saved_pw = f.read().strip()
         if entered_pw == saved_pw:
             self.root.destroy()

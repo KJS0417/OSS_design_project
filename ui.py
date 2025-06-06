@@ -11,23 +11,28 @@ class UI:
         input_frame = ttk.Frame(self.root)
         input_frame.pack(pady=10)
 
-        ttk.Label(input_frame, text="날짜 (YYYY-MM-DD):").grid(row=0, column=0)
+        date_label = ttk.Label(input_frame, text="날짜 (YYYY-MM-DD):")
+        date_label.grid(row=0, column=0)
         date_entry = ttk.Entry(input_frame)
         date_entry.grid(row=0, column=1)
 
-        ttk.Label(input_frame, text="카테고리:").grid(row=1, column=0)
+        category_label = ttk.Label(input_frame, text="카테고리:")
+        category_label.grid(row=1, column=0)
         category_entry = ttk.Entry(input_frame)
         category_entry.grid(row=1, column=1)
 
-        ttk.Label(input_frame, text="수입/지출:").grid(row=2, column=0)
+        type_label = ttk.Label(input_frame, text="수입/지출:")
+        type_label.grid(row=2, column=0)
         type_combobox = ttk.Combobox(input_frame, values=["수입", "지출"])
         type_combobox.grid(row=2, column=1)
 
-        ttk.Label(input_frame, text="금액:").grid(row=3, column=0)
+        amount_label = ttk.Label(input_frame, text="금액:")
+        amount_label.grid(row=3, column=0)
         amount_entry = ttk.Entry(input_frame)
         amount_entry.grid(row=3, column=1)
 
-        ttk.Label(input_frame, text="메모:").grid(row=4, column=0)
+        memo_label = ttk.Label(input_frame, text="메모:")
+        memo_label.grid(row=4, column=0)
         memo_entry = ttk.Entry(input_frame)
         memo_entry.grid(row=4, column=1)
 
