@@ -10,9 +10,16 @@ VS Code 다운로드: https://code.visualstudio.com/
 VS Code 실행 후, 왼쪽 사이드바의 Extensions (확장 프로그램) 아이콘 클릭 → Python 확장 설치
 
 
-3. 제출한 PayLog.zip 파일을 바탕화면에 압축 해제 
+3. 바탕화면에 PayLog 폴더 생성 후, 폴더 안에 소스 코드들(.py) 저장
 
-PayLog.zip --(압축 풀기)--> PayLog 폴더
+PayLog/
+├── main.py
+├── login_window.py
+├── transaction_manager.py
+├── file_manager.py
+├── chart.py
+├── input_validator.py
+├── ui.py
 
 
 4. 프로젝트 폴더 열기
